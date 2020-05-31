@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>EDA Loan Status Prediction Form</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  .jumbotron{
+    background-color: sky blue;
+    color: #050505;
+  }
+  input[type=submit] {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+ }
+th, td { 
+                width:150px; 
+                text-align:center; 
+     
+                padding:5px ;
+              }
+div
+{
+ background-image:url("download.jpg");
+background-size:cover;
+background-attachment:fixed;
+}
+  </style>
+
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h2 style="color:Tomato;">EDA Loan Status Prediction Form</h2>
+<div>
+<table 
+           cellspacing="15"style="width:25%" align="center">
+<form class = "form-inline" action="/predict" method="POST">
+<tr>
+        <td><label for="Gender">Gender</label></td>
+	<td><select id="Gender" name="Gender" required="required">
+	<option value="0">Female</option>
+	<option value="1">Male</option>
+	</select></td>
+</tr>
+<tr>
+	<td><label for="Married">Married</label></td>
+	<td><select id="Married" name="Married" required="required">
+	<option value="0">NO</option>
+	<option value="1">YES</option>
+	</select></td>
+</tr>
+<tr>	
+
+	<td><label for="Dependents">Dependents</label></td>
+	<td><select id="Dependents" name="Dependents" required="required">
+	<option value="0">0</option>
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3+</option>
+	</select></td>
+</tr>
+<tr>
+	<td><label for="Education">Education</label></td>
+	<td><select id="Education" name="Education" required="required">
+	<option value="0">Not Graduate</option>
+	<option value="1">Graduate</option>
+	</select></td>
+</tr>
+<tr>
+	<td><label for="Self_Employed">Self Employed</label></td>
+	<td><select id="Self_Employed" name="Self_Employed" required="required">
+	<option value="0">NO</option>
+	<option value="1">YES</option>
+	</select></td>
+</tr>
+<tr>
+	<td><label for="ApplicantIncome">ApplicantIncome</label></td>
+	<td><input type="text" id="ApplicantIncome" name="ApplicantIncome" placeholder="In thousands" required="required"></td>
+</tr>
+<br>
+<tr>
+	<td><label for="CoapplicantIncome">Coapplicant Income</label></td>
+	<td><input type="text" id="CoapplicantIncome" name="CoapplicantIncome" placeholder="In thousands" required="required">
+	</td>
+</tr>
+<tr>
+	<td><label for="LoanAmount">Loan Amount</label></td>
+	<td><input type="number" id="LoanAmount" name="LoanAmount" placeholder="In thousands" required="required"></td>
+</tr>
+<tr>
+	<td><label for="Loan_Amount_Term">Loan Amount Term </label></td>
+	<td><input type="text" id="Loan_Amount_Term" name="Loan_Amount_Term" placeholder="In months" required="required"></td>
+</tr>
+<tr>
+	<td><label for="Credit_History">Credit History</label></td>
+	<td><select id="Credit_History" name="Credit_History" required="required">
+	<option value="0">0</option>
+	<option value="1">1</option>
+	</select></td>
+</r>
+<tr>
+	<td><label for="Property_Area">Property Area</label></td>
+	<td><select id="Property_Area" name="Property_Area" required="required">
+	<option value="0">Urban</option>
+	<option value="1">Rural</option>
+	<option value="2">Semi Urban</option>
+	</select></td>
+</tr>
+</table>
+	<div class="input-group-btn">
+	<input type="submit" class="btn btn-danger" color="black" value="Submit">
+	</div>
+</form>
+</div>
+{{ prediction }}
+</body>
+</html>
